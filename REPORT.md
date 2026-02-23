@@ -12,11 +12,7 @@
 ## Студент
 Контилеев Михаил
 Группа: ИУ8-21  
-<<<<<<< HEAD
-Дата: 17.02.2026
-=======
 Дата: 22.02.2026
->>>>>>> ded09a7 (Обновлен отчет и добавлен новый файл)
 
 ---
 
@@ -27,10 +23,7 @@
 $ export GITHUB_USERNAME=<имя пользователя>
 $ export GIST_TOKEN=<токен>
 $ alias edit=nano
-<<<<<<< HEAD
-=======
 ```
->>>>>>> ded09a7 (Обновлен отчет и добавлен новый файл)
 
 Результат: переменные окружения заданы, alias работает.
 
@@ -58,15 +51,10 @@ $ cd workspace
 ```sh
 ### 3. Установка Node.js
 $ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
-<<<<<<< HEAD
-
-Вывод:
-=======
 ```
 
 Вывод:
 
->>>>>>> ded09a7 (Обновлен отчет и добавлен новый файл)
 --2026-02-18 15:43:14--  https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
 Распознаётся nodejs.org (nodejs.org)… 104.20.1.252, 172.66.128.70, 2606:4700:10::6814:1fc, ...
 Подключение к nodejs.org (nodejs.org)|104.20.1.252|:443... соединение установлено.
@@ -76,10 +64,7 @@ HTTP-запрос отправлен. Ожидание ответа… 200 OK
 node-v6.11.5-linux-x64.tar.xz        100%[===================================================================>]   8,92M  6,90MB/s    за 1,3s    
 2026-02-18 15:43:16 (6,90 MB/s) - ‘node-v6.11.5-linux-x64.tar.xz’ сохранён [9356460/9356460]
 
-<<<<<<< HEAD
-=======
 ```
->>>>>>> ded09a7 (Обновлен отчет и добавлен новый файл)
 $ tar -xf node-v6.11.5-linux-x64.tar.xz
 $ rm -rf node-v6.11.5-linux-x64.tar.xz
 $ mv node-v6.11.5-linux-x64 node
@@ -88,24 +73,9 @@ $ mv node-v6.11.5-linux-x64 node
 
 ```sh
 $ ls node/bin
-<<<<<<< HEAD
-Вывод:
-node  npm
-
-$ echo ${PATH}
-Вывод: 
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
-
-$ export PATH=${PATH}:`pwd`/node/bin
-$ echo ${PATH}
-Вывод: 
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/misha/misakontileev/workspace/reports/lab01/node/bin
-
-=======
 ```
 
 Вывод:
-
 node  npm
 
 ```
@@ -113,7 +83,6 @@ $ echo ${PATH}
 ```
 
 Вывод: 
-
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 
 ```
@@ -122,11 +91,26 @@ $ echo ${PATH}
 ```
 
 Вывод: 
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/misha/misakontileev/workspace/reports/lab01/node/bin
+
+```
+$ echo ${PATH}
+```
+
+Вывод: 
+
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+```
+$ export PATH=${PATH}:`pwd`/node/bin
+$ echo ${PATH}
+```
+
+Вывод: 
 
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/misha/misakontileev/workspace/reports/lab01/node/bin
 
 ```
->>>>>>> ded09a7 (Обновлен отчет и добавлен новый файл)
 $ mkdir scripts
 $ cat > scripts/activate<<EOF
 export PATH=\${PATH}:`pwd`/node/bin
@@ -140,22 +124,14 @@ $ source scripts/activate
 
 ```sh
 $ gem install gist
-<<<<<<< HEAD
-=======
 ```
 
->>>>>>> ded09a7 (Обновлен отчет и добавлен новый файл)
 Вывод:
 Successfully installed gist-6.0.0
 Parsing documentation for gist-6.0.0
 Done installing documentation for gist after 0 seconds
 1 gem installed
 
-<<<<<<< HEAD
-```
-
-=======
->>>>>>> ded09a7 (Обновлен отчет и добавлен новый файл)
 ```sh
 $ (umask 0077 && echo ${GIST_TOKEN} > ~/.gist)
 ```
@@ -172,51 +148,16 @@ $ mkdir reports/lab${LAB_NUMBER}
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
 $ cd reports/lab${LAB_NUMBER}
 $ edit REPORT.md
-<<<<<<< HEAD
-Редактировал в текстовом редакторе nano.
-=======
-
+```
 Редактировал в текстовом редакторе nano.
 
->>>>>>> ded09a7 (Обновлен отчет и добавлен новый файл)
+```
 $ gist REPORT.md
 ```
 
 ## Homework
 
 1. Скачайте библиотеку *boost* с помощью утилиты **wget**. Адрес для скачивания `https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz`.
-<<<<<<< HEAD
-2. Разархивируйте скаченный файл в директорию `~/boost_1_69_0`
-3. Подсчитайте количество файлов в директории `~/boost_1_69_0` **не включая** вложенные директории.
-Команда: find ~/boost_1_69_0 -maxdepth 1 -type f | wc -l
-Вывод: 16.
-4. Подсчитайте количество файлов в директории `~/boost_1_69_0` **включая** вложенные директории.
-Команда: find ~/boost_1_69_0 -type f | wc -l
-Вывод: 62050.
-5. Подсчитайте количество заголовочных файлов, файлов с расширением `.cpp`, сколько остальных файлов (не заголовочных и не `.cpp`).
-Команда: find ~/boost_1_69_0 -type f \( -name "*.hpp" -o -name "*.h" \) | wc -l
-Вывод: 15208.
-Команда: find ~/boost_1_69_0 -type f -name "*.cpp" | wc -l
-Вывод: 13789.
-Остальные файлы по команде: find ~/boost_1_69_0 -type f ! -name "*.hpp" ! -name "*.h" ! -name "*.cpp" | wc -l
-Вывод: 33053.
-6. Найдите полный пусть до файла `any.hpp` внутри библиотеки *boost*.
-Команда: find ~/boost_1_69_0 -name any.hpp > 1.txt
-Вывод в файле 1.txt
-7. Выведите в консоль все файлы, где упоминается последовательность `boost::asio`.
-Команда: grep -r "boost::asio" ~/boost_1_69_0 > 2.txt
-Вывод в файле 2.txt
-8. Скомпилирутйе *boost*. Можно воспользоваться [инструкцией](https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html#or-build-custom-binaries) или [ссылкой](https://codeyarns.com/2017/01/24/how-to-build-boost-on-linux/).
-9. Перенесите все скомпилированные на предыдущем шаге статические библиотеки в директорию `~/boost-libs`.
-10. Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
-Команда: du -h ~/boost-libs/* > 3.txt
-Вывод в файле 3.txt
-11. Найдите *топ10* самых "тяжёлых".
-Команда: du -h ~/boost-libs/* | sort -hr | head -10 > 4.txt
-Вывод в файле 4.txt
-Copyright (c) 2015-2021 The ISC Authors
-```
-=======
 
 ```
 $ wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz
@@ -361,5 +302,3 @@ $ du -h ~/boost-libs/* | sort -hr | head -10 > 4.txt
 ```
 
 Вывод в файле 4.txt
-
-(Обновлен отчет и добавлен новый файл)
